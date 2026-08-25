@@ -32,7 +32,7 @@
 
 ### CodeFlow 命令行工具（推荐）
 
-[CodeFlow 命令行工具](/guides/codeflow-cli.md) 是官方交互式终端工具，登录后可在终端内完成控制台的用户功能，并把令牌一键写入 Claude Code、Codex 等客户端的配置
+[CodeFlow 命令行工具](/guides/codeflow-cli.md) 是官方交互式终端工具，登录后可在终端内完成控制台的用户功能，并把令牌一键写入客户端配置
 
 macOS／Linux 在终端中运行：
 
