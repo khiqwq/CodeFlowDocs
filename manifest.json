@@ -1,0 +1,31 @@
+{
+  "groups": [
+    {
+      "title": "开始使用",
+      "items": [
+        { "slug": "quick-start", "title": "快速开始" },
+        { "slug": "codeflow-cli", "title": "命令行工具" },
+        { "slug": "access", "title": "接入凭证" },
+        { "slug": "models-and-billing", "title": "模型与计费" }
+      ]
+    },
+    {
+      "title": "客户端接入",
+      "items": [
+        { "slug": "claude-code", "title": "Claude Code" },
+        { "slug": "codex", "title": "Codex" },
+        { "slug": "cc-switch", "title": "CC Switch" },
+        { "slug": "cherry-studio", "title": "Cherry Studio" },
+        { "slug": "kilo-code", "title": "Kilo Code" },
+        { "slug": "opencode", "title": "OpenCode" },
+        { "slug": "openclaw", "title": "OpenClaw" }
+      ]
+    },
+    {
+      "title": "账户与支持",
+      "items": [
+        { "slug": "console", "title": "控制台与支持" }
+      ]
+    }
+  ]
+}
