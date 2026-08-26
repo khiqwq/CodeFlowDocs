@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /**
  * CodeFlowDocs 内容契约校验（契约 v2）
+ * 本脚本是唯一校验层：站内摄取信任契约直接发布，不做二次检查
  * 用法：在仓库根目录运行 node scripts/check.mjs
  * 任何违规逐条列出并以退出码 1 结束；全部通过输出 PASS
  */

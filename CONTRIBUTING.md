@@ -31,6 +31,6 @@
 
 ## 提交前检查
 
-在仓库根目录运行 `node scripts/check.mjs`，全部通过后再提交；push 与 PR 时 CI 会自动执行同一脚本
+在仓库根目录运行 `node scripts/check.mjs`，全部通过后再提交；push 与 PR 时 CI 会自动执行同一脚本。本脚本是唯一校验层，站内摄取信任契约直接发布快照，未通过检查的提交推上 main 会原样进入线上文档
 
 确认 `manifest.json` 合法、所有条目和图片均有对应文件，指南无禁止语法和硬编码站点地址，并在 GitHub 网页端抽查 Markdown 预览
