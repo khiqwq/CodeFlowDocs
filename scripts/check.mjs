@@ -91,16 +91,13 @@ function slugify(text) {
     .replace(/[^\p{L}\p{N}\s-]/gu, '')
     .replace(/\s+/g, '-');
 }
-function headingAnchor(raw) {
-  return slugify(raw.replace(/\[([^\]]*)\]\([^)\s]*\)/g, '$1'));
-}
 function headingSlugsOf(lines) {
   const out = new Set();
   for (const { text, fenced } of lines) {
     if (fenced) continue;
     const m = /^#{1,6}\s+(.*)$/.exec(text);
     if (m === null) continue;
-    const slug = headingAnchor(m[1]);
+    const slug = slugify(m[1]);
     if (slug !== '') out.add(slug);
   }
   return out;
@@ -132,7 +129,7 @@ for (const slug of slugs) {
   const h1Count = lines.filter((l) => !l.fenced && /^# /.test(l.text)).length;
   if (h1Count > 1) fail(rel, 0, `h1 只能有一个（当前 ${h1Count} 个）`);
 
-  for (const { no, text, fenced } of lines) {
+  for (const [i, { no, text, fenced }] of lines.entries()) {
     for (const banned of BANNED_TEXT) {
       if (text.includes(banned)) fail(rel, no, `出现具体站点地址「${banned}」，应写 {{SITE_URL}}`);
     }
@@ -145,10 +142,23 @@ for (const slug of slugs) {
     }
     if (fenced) continue;
 
+    /* 标题只允许一种形态：顶格 ATX、纯文本；锚点提取方（本脚本与站内搜索）据此免于解析行内语法 */
+    if (/^ {1,3}#{1,6}(\s|$)/.test(text)) fail(rel, no, '标题必须顶格书写');
+    const prevLine = lines[i - 1];
+    if (
+      /^ {0,3}(=+|-+)\s*$/.test(text) &&
+      prevLine !== undefined &&
+      !prevLine.fenced &&
+      prevLine.text.trim() !== ''
+    ) {
+      fail(rel, no, '禁止下划线式标题，===/--- 紧贴上文会被渲染为标题；分隔线须与上文空行隔开');
+    }
     if (/^#{5,}/.test(text)) fail(rel, no, '标题层级不得超过 h4');
     const heading = /^#{1,6}\s+(.*)$/.exec(text);
     if (heading !== null) {
-      const anchor = headingAnchor(heading[1]);
+      if (/[[\]]/.test(heading[1])) fail(rel, no, '标题内禁止方括号与链接语法，锚点由纯文本标题生成');
+      if (/\s#+\s*$/.test(heading[1])) fail(rel, no, '禁止闭合 # 风格标题（如 ## 标题 ##）');
+      const anchor = slugify(heading[1]);
       if (anchor === '') fail(rel, no, '标题文本去除标点后为空，无法生成锚点');
       else if (seenAnchors.has(anchor)) fail(rel, no, `标题锚点与同页前文重复：#${anchor}`);
       seenAnchors.add(anchor);
