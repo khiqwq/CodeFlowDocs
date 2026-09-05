@@ -2,10 +2,12 @@
 
 Claude Code 是 Anthropic 官方的终端编码代理，适合直接在终端内完成编码任务。它按 Anthropic 协议接入，接入地址（Base URL）不带 `/v1`
 
-> **注意**
+> **配置说明**
+>
 > 客户端界面与配置字段可能随版本更新变化，模型 ID 与可用分组以 {{SITE_NAME}} 控制台实时显示为准。本页依据 2026 年 9 月 6 日核验的信息整理
 
 > **提示**
+>
 > 推荐使用 [CodeFlow 命令行工具](/guides/codeflow-cli.md#一键配置客户端) 一键写入本页配置，无需手动编辑文件。本页说明手动配置方式
 
 ## 准备工作
@@ -16,15 +18,15 @@ Claude Code 是 Anthropic 官方的终端编码代理，适合直接在终端内
 
 ## 安装 Claude Code
 
-以下命令来自 Claude Code 官方安装入口，按操作系统任选一种，勿在同一台设备上重复执行多种安装方式
+以下命令来自 Claude Code 官方安装入口，按操作系统选择一种安装方式，不要在同一台设备上重复执行多种安装方式
 
-**Homebrew（macOS、Linux）：**
+**Homebrew（macOS／Linux）：**
 
 ```bash
 brew install --cask claude-code
 ```
 
-**macOS、Linux、WSL：**
+**macOS／Linux／WSL：**
 
 ```bash
 curl -fsSL https://claude.ai/install.sh | bash
@@ -36,7 +38,7 @@ curl -fsSL https://claude.ai/install.sh | bash
 irm https://claude.ai/install.ps1 | iex
 ```
 
-安装完成后验证：
+安装完成后，验证命令是否可用：
 
 ```bash
 claude --version
@@ -48,12 +50,12 @@ claude --version
 
 配置写在用户级 `settings.json` 中：
 
-|操作系统|路径|
+|操作系统|默认路径|
 |---|---|
 |macOS／Linux|`~/.claude/settings.json`|
 |Windows|`%USERPROFILE%\.claude\settings.json`|
 
-文件不存在时新建。填入以下内容，并将 `ANTHROPIC_AUTH_TOKEN` 的值替换为在 **令牌管理** 创建的令牌：
+文件不存在时新建。填入以下内容，并将 `ANTHROPIC_AUTH_TOKEN` 的值替换为在 **令牌管理** 中创建的令牌：
 
 ```json
 {
@@ -78,13 +80,13 @@ claude --version
 
 ## 验证接入
 
-保存配置后完全退出正在运行的 Claude Code，重新打开终端，进入项目目录启动：
+保存配置后，完全退出正在运行的 Claude Code，重新打开终端，进入项目目录并运行：
 
 ```bash
 claude
 ```
 
-出现对话界面并能正常返回内容，即表示接入成功
+在对话界面发送一条测试消息，收到正常响应，即表示接入成功
 
 ## 常见问题
 
@@ -92,6 +94,6 @@ claude
 |---|---|
 |返回 401 或认证失败|确认 `ANTHROPIC_AUTH_TOKEN` 有效且属于 Claude 系列分组|
 |返回 404 或模型不存在|将 `ANTHROPIC_MODEL` 更新为 **模型广场** 当前可用的模型 ID|
-|修改后没有生效|完全退出 Claude Code 后重开，确认改的是用户级 `settings.json`|
+|修改配置后未生效|完全退出并重新启动 Claude Code，确认修改的是用户级 `settings.json`|
 
-更多安装信息请参考 [Claude Code 官方文档](https://code.claude.com/docs/zh-CN/setup)
+更多安装信息参见 [Claude Code 官方文档](https://code.claude.com/docs/zh-CN/setup)

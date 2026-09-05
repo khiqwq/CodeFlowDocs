@@ -18,6 +18,7 @@
         { "slug": "cherry-studio", "title": "Cherry Studio" },
         { "slug": "kilo-code", "title": "Kilo Code" },
         { "slug": "opencode", "title": "OpenCode" },
+        { "slug": "pi", "title": "Pi" },
         { "slug": "openclaw", "title": "OpenClaw" }
       ]
     },

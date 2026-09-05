@@ -1,6 +1,6 @@
 # 控制台与支持
 
-本页速览控制台中的账户与支持类功能页面，并汇总获取帮助的渠道与各客户端的官方文档入口
+本页介绍控制台中的账户与支持功能，并汇总获取帮助的渠道与各客户端的官方文档入口
 
 ## 功能速览
 
@@ -15,7 +15,7 @@
 
 ## 账户安全
 
-建议在 **个人中心** 启用两步验证或 Passkey，并留意登录设备列表。账户余额与订阅均与账号绑定，账号安全直接关系到资产安全
+在 **个人中心** 启用两步验证或 Passkey，并定期检查登录设备列表。账户余额与订阅均与账号绑定，账号安全直接关系到资产安全
 
 ## 获取帮助
 
@@ -30,4 +30,5 @@
 - [CC Switch](https://github.com/farion1231/cc-switch/blob/main/README_ZH.md)
 - [Cherry Studio](https://docs.cherry-ai.com/)
 - [OpenCode](https://opencode.ai/docs)
+- [Pi](https://pi.dev/docs/latest)
 - [OpenClaw](https://github.com/openclaw/openclaw)

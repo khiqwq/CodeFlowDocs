@@ -2,7 +2,8 @@
 
 CC Switch 是第三方图形化供应商配置管理工具，可在多个供应商之间切换 Claude Code 与 Codex 的连接配置。若只接入 {{SITE_NAME}}，使用官方 [CodeFlow 命令行工具](/guides/codeflow-cli.md) 即可一键完成配置
 
-> **注意**
+> **配置说明**
+>
 > 客户端界面与配置字段可能随版本更新变化，模型 ID 与可用分组以 {{SITE_NAME}} 控制台实时显示为准。本页依据 2026 年 9 月 6 日核验的信息整理
 
 ## 准备工作
@@ -27,20 +28,20 @@ CC Switch 是第三方图形化供应商配置管理工具，可在多个供应�
 
 ![选择自定义配置](/assets/images/cc-switch/custom-config.png)
 
-下拉找到自定义供应商配置项
+向下滚动，找到自定义供应商配置项
 
 ## 填写配置
 
 |配置项|填写内容|
 |---|---|
-|供应商名称|`{{SITE_NAME}}`|
-|官网链接|`{{SITE_URL}}`|
-|API Key|`sk-您的令牌`|
-|请求地址|Claude 使用 `{{SITE_URL}}`（不带 `/v1`），Codex 使用 `{{SITE_URL}}/v1`|
+|**供应商名称**|`{{SITE_NAME}}`|
+|**官网链接**|`{{SITE_URL}}`|
+|**API Key**|`sk-您的令牌`|
+|**请求地址**|Claude 使用 `{{SITE_URL}}`（不带 `/v1`），Codex 使用 `{{SITE_URL}}/v1`|
 
-请求地址需与当前选中的客户端一致。中国优化线路与全球加速线路的账号、令牌与余额通用，可随时切换；线路选择与各客户端的地址要求见[接入凭证中的地址列表](/guides/access.md#base-url)
+接入地址需与当前选中的客户端一致。中国优化线路与全球加速线路的账号、令牌与余额通用，可随时切换；线路选择与各客户端要求的地址格式见[接入凭证中的地址列表](/guides/access.md#base-url)
 
-填入配置内容，其中 `sk-您的令牌` 为占位符，替换为实际令牌，配置完成后点击保存
+按表格填写配置，将 `sk-您的令牌` 替换为在 {{SITE_NAME}} 创建的令牌，填写完成后点击 **保存**
 
 ![填入配置内容](/assets/images/cc-switch/provider-config.png)
 
@@ -55,17 +56,17 @@ Claude 配置模板如下：
 }
 ```
 
-配置 Codex 时，在分组条中选择 `Codex`，并使用带 `/v1` 的接入地址 `{{SITE_URL}}/v1`；模型 ID 和令牌字段按 CC Switch 当前表单填写。如需手动配置 `config.toml` 与 `auth.json`，参见[Codex](/guides/codex.md)
+配置 Codex 时，在分组条中选择 **Codex**，并使用带 `/v1` 的接入地址 `{{SITE_URL}}/v1`；模型 ID 和令牌字段按 CC Switch 当前表单填写。如需手动配置 `config.toml` 与 `auth.json`，参见 [Codex](/guides/codex.md)
 
 ## 保存并启用
 
-添加成功后，在主界面找到刚创建的供应商，点击 **启用**，直到状态显示「使用中」
+添加成功后，在主界面找到刚创建的供应商，点击 **启用**，确认状态显示 **使用中**
 
 ![启用供应商](/assets/images/cc-switch/enable-provider.png)
 
 ## 验证接入
 
-Claude 供应商在终端运行 `claude`，Codex 供应商运行 `codex`。出现对话界面并能正常回复，即表示接入成功。下图为 Claude Code 的验证示例
+在终端启动已配置的客户端：Claude Code 运行 `claude`，Codex 运行 `codex`。进入对话界面后，发送一条测试消息，收到正常响应，即表示接入成功。下图为 Claude Code 的验证示例
 
 ![Claude Code 运行结果](/assets/images/cc-switch/claude-code-result.png)
 
