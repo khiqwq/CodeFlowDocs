@@ -3,7 +3,7 @@
 Codex 是 OpenAI 官方的编码代理，提供命令行与桌面端，二者共用用户级 `~/.codex` 目录，配置一次即对两端同时生效。按 Responses 协议接入 {{SITE_NAME}}，接入地址（Base URL）带 `/v1`
 
 > **注意**
-> 客户端界面与配置字段可能随版本更新变化，模型 ID 与可用分组以 {{SITE_NAME}} 控制台实时显示为准。本页依据 2026 年 8 月 20 日核验的信息整理
+> 客户端界面与配置字段可能随版本更新变化，模型 ID 与可用分组以 {{SITE_NAME}} 控制台实时显示为准。本页依据 2026 年 9 月 6 日核验的信息整理
 
 > **提示**
 > 推荐使用 [CodeFlow 命令行工具](/guides/codeflow-cli.md#一键配置客户端) 一键写入本页配置，无需手动编辑文件。本页说明手动配置方式
@@ -38,7 +38,7 @@ Codex 的配置由 `config.toml` 与 `auth.json` 两个文件组成，都位于�
 
 ```toml
 model_provider = "codeflow"
-model = "gpt-5.6-terra"
+model = "gpt-6-astra"
 
 [model_providers.codeflow]
 name = "codeflow"
@@ -47,7 +47,7 @@ wire_api = "responses"
 requires_openai_auth = true
 ```
 
-示例使用 `gpt-5.6-terra`，实际填写以 **模型广场** 当前可用的 GPT 模型 ID 为准；该模型下线时，只需替换 `model` 的值，不要修改供应商配置字段
+示例使用 `gpt-6-astra`，实际填写以 **模型广场** 当前可用的 GPT 模型 ID 为准；该模型下线时，只需替换 `model` 的值，不要修改供应商配置字段
 
 > **注意**
 > `base_url` 必须带 `/v1`；令牌请选择 Codex 官方分组

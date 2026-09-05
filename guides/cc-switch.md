@@ -3,7 +3,7 @@
 CC Switch 是第三方图形化供应商配置管理工具，可在多个供应商之间切换 Claude Code 与 Codex 的连接配置。若只接入 {{SITE_NAME}}，使用官方 [CodeFlow 命令行工具](/guides/codeflow-cli.md) 即可一键完成配置
 
 > **注意**
-> 客户端界面与配置字段可能随版本更新变化，模型 ID 与可用分组以 {{SITE_NAME}} 控制台实时显示为准。本页依据 2026 年 8 月 20 日核验的信息整理
+> 客户端界面与配置字段可能随版本更新变化，模型 ID 与可用分组以 {{SITE_NAME}} 控制台实时显示为准。本页依据 2026 年 9 月 6 日核验的信息整理
 
 ## 准备工作
 
@@ -19,25 +19,26 @@ CC Switch 是第三方图形化供应商配置管理工具，可在多个供应�
 
 ## 添加供应商
 
-打开已安装的 CC Switch
+打开已安装的 CC Switch，在分组条中选择要配置的客户端。
 
 ![CC Switch 初始界面](/assets/images/cc-switch/initial-screen.png)
-
-在分组条中选择要配置的客户端
-
-![切换分组](/assets/images/cc-switch/switch-client-group.png)
 
 在对应分组右侧点击 **+** 添加供应商；如果按钮不可见，先将窗口最大化。选择 **自定义配置**
 
 ![选择自定义配置](/assets/images/cc-switch/custom-config.png)
 
-将供应商名称填写为 `CodeFlow`
-
-![填写供应商名称](/assets/images/cc-switch/provider-name.png)
+下拉找到自定义供应商配置项。
 
 ## 填写配置
 
-填入配置内容，其中 `sk-您的令牌` 为占位符，替换为实际令牌
+|配置项|填写内容|
+|---|---|
+|供应商名称|`{{SITE_NAME}}`|
+|官网链接|`{{SITE_URL}}`|
+|API Key|`您创建的令牌api`|
+|请求地址|`{{SITE_URL}}`|
+
+填入配置内容，其中 `sk-您的令牌` 为占位符，替换为实际令牌，配置完成后点击保存
 
 ![填入配置内容](/assets/images/cc-switch/provider-config.png)
 

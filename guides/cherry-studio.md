@@ -3,7 +3,7 @@
 Cherry Studio 是一款支持多提供商管理的桌面 AI 对话客户端。接入 {{SITE_NAME}} 的主路径是 Anthropic 提供商，接入地址（Base URL）不带 `/v1`
 
 > **注意**
-> 客户端界面与配置字段可能随版本更新变化，模型 ID 与可用分组以 {{SITE_NAME}} 控制台实时显示为准。本页依据 2026 年 8 月 20 日核验的信息整理
+> 客户端界面与配置字段可能随版本更新变化，模型 ID 与可用分组以 {{SITE_NAME}} 控制台实时显示为准。本页依据 2026 年 9 月 6 日核验的信息整理
 
 ## 准备工作
 
@@ -21,17 +21,13 @@ Cherry Studio 是一款支持多提供商管理的桌面 AI 对话客户端。�
 
 ## 添加提供商
 
-点击左下角的 **添加服务商**
+点击左下角的设置图标并点击 **添加服务商**
 
 ![进入设置页面](/assets/images/cherry-studio/settings-entry.png)
 
 ![添加供应商](/assets/images/cherry-studio/add-provider.png)
 
 ## 填写配置
-
-提供商列表通常包含 `OpenAI` 与 `Anthropic`，主路径选择 `Anthropic`
-
-![添加模型服务](/assets/images/cherry-studio/add-model-service.png)
 
 |配置项|填写内容|
 |---|---|
@@ -40,11 +36,15 @@ Cherry Studio 是一款支持多提供商管理的桌面 AI 对话客户端。�
 |API 密钥|在 {{SITE_NAME}} 创建的令牌|
 |令牌分组|Claude 系列分组|
 
+提供商列表通常包含 `OpenAI` 与 `Anthropic`，主路径选择 `Anthropic`
+
+![添加模型服务](/assets/images/cherry-studio/add-model-service.png)
+
 填写完成后，在右侧供应商详情中点击 **获取模型列表**
 
 ![获取模型列表](/assets/images/cherry-studio/api-endpoint-key.png)
 
-从返回的列表中勾选需要使用的模型
+从返回的列表中点击您需要的模型右侧 **+** 号添加模型
 
 ![模型列表](/assets/images/cherry-studio/model-list.png)
 
