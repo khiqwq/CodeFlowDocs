@@ -27,10 +27,10 @@ OpenClaw 是本地网关形态的代理工具。接入 {{SITE_NAME}} 时走 `ant
     "agents": {
         "defaults": {
             "model": {
-                "primary": "codeflow/claude-sonnet-5"
+                "primary": "codeflow/claude-fable-5-1"
             },
             "models": {
-                "codeflow/claude-sonnet-5": {}
+                "codeflow/claude-fable-5-1": {}
             }
         }
     },
@@ -43,8 +43,8 @@ OpenClaw 是本地网关形态的代理工具。接入 {{SITE_NAME}} 时走 `ant
                 "api": "anthropic-messages",
                 "models": [
                     {
-                        "id": "claude-sonnet-5",
-                        "name": "claude-sonnet-5",
+                        "id": "claude-fable-5-1",
+                        "name": "claude-fable-5-1",
                         "reasoning": true,
                         "input": [
                             "text"
