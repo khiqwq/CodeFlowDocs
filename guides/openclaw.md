@@ -19,6 +19,11 @@ OpenClaw 是本地网关形态的代理工具。接入 {{SITE_NAME}} 时走 `ant
 
 编辑配置文件 `~/.openclaw/openclaw.json`（Windows 为 `%USERPROFILE%\.openclaw\openclaw.json`）。`baseUrl` 使用不带 `/v1` 的地址，`api` 填写 `anthropic-messages`，路径拼接方式由 OpenClaw 的当前版本决定
 
+> **示例价格来源与核验**
+> - **来源**：[模型广场界面留档](/guides/models-and-billing.md#模型广场)
+> - **核验范围**：`claude-fable-5-1` 的输入、输出、缓存读取与缓存写入单价，单位为美元／百万 Token，未计入分组倍率
+> - **最后核验日期**：2026 年 9 月 6 日
+
 ```json
 {
     "gateway": {
@@ -50,10 +55,10 @@ OpenClaw 是本地网关形态的代理工具。接入 {{SITE_NAME}} 时走 `ant
                             "text"
                         ],
                         "cost": {
-                            "input": 3,
-                            "output": 15,
-                            "cacheRead": 0.3,
-                            "cacheWrite": 3.75
+                            "input": 10,
+                            "output": 50,
+                            "cacheRead": 1,
+                            "cacheWrite": 12.5
                         },
                         "contextWindow": 200000,
                         "maxTokens": 64000

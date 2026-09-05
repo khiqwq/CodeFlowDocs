@@ -19,7 +19,7 @@ CC Switch 是第三方图形化供应商配置管理工具，可在多个供应�
 
 ## 添加供应商
 
-打开已安装的 CC Switch，在分组条中选择要配置的客户端。
+打开已安装的 CC Switch，在分组条中选择要配置的客户端
 
 ![CC Switch 初始界面](/assets/images/cc-switch/initial-screen.png)
 
@@ -27,7 +27,7 @@ CC Switch 是第三方图形化供应商配置管理工具，可在多个供应�
 
 ![选择自定义配置](/assets/images/cc-switch/custom-config.png)
 
-下拉找到自定义供应商配置项。
+下拉找到自定义供应商配置项
 
 ## 填写配置
 
@@ -35,8 +35,10 @@ CC Switch 是第三方图形化供应商配置管理工具，可在多个供应�
 |---|---|
 |供应商名称|`{{SITE_NAME}}`|
 |官网链接|`{{SITE_URL}}`|
-|API Key|`您创建的令牌api`|
-|请求地址|`{{SITE_URL}}`|
+|API Key|`sk-您的令牌`|
+|请求地址|Claude 使用 `{{SITE_URL}}`（不带 `/v1`），Codex 使用 `{{SITE_URL}}/v1`|
+
+请求地址需与当前选中的客户端一致。中国优化线路与全球加速线路的账号、令牌与余额通用，可随时切换；线路选择与各客户端的地址要求见[接入凭证中的地址列表](/guides/access.md#base-url)
 
 填入配置内容，其中 `sk-您的令牌` 为占位符，替换为实际令牌，配置完成后点击保存
 
