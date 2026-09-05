@@ -3,7 +3,7 @@
 OpenCode 是终端形态的编码代理，适合全程在命令行中完成开发任务。接入 {{SITE_NAME}} 时，供应商配置走 `@ai-sdk/anthropic`，但接入地址（Base URL）需要带 `/v1`
 
 > **注意**
-> 客户端界面与配置字段可能随版本更新变化，模型 ID 与可用分组以 {{SITE_NAME}} 控制台实时显示为准。本页依据 2026 年 8 月 20 日核验的信息整理
+> 客户端界面与配置字段可能随版本更新变化，模型 ID 与可用分组以 {{SITE_NAME}} 控制台实时显示为准。本页依据 2026 年 9 月 6 日核验的信息整理
 
 ## 准备工作
 
@@ -28,16 +28,18 @@ OpenCode 是终端形态的编码代理，适合全程在命令行中完成开�
       "name": "CodeFlow",
       "options": { "baseURL": "{{SITE_URL}}/v1" },
       "models": {
-        "claude-sonnet-5": { "name": "Sonnet 5" }
+        "claude-fable-5-1": { "name": "Claude Fable 5.1" }
       }
     }
   },
-  "model": "codeflow/claude-sonnet-5"
+  "model": "codeflow/claude-fable-5-1"
 }
 ```
 
 > **注意**
 > 供应商配置必须置于 `provider.codeflow` 下，不能将 `npm`、`options`、`models` 平铺到最外层。`baseURL` 必须带 `/v1`；`@ai-sdk/anthropic` 会在此基础上拼接消息路径
+
+示例仅保留一个模型条目，用于说明配置结构。使用前请将模型 ID、能力和计费字段替换为 **模型广场** 当前可用的信息，不要继续使用已经下线的模型 ID
 
 ## 登录与启用
 
