@@ -17,7 +17,7 @@ Kilo Code 是 VS Code 扩展形态的编码代理，适合在编辑器内直接�
 
 ## 打开配置入口
 
-进入 Kilo Code 扩展，点击右上角的 **设置**
+进入 Kilo Code 扩展，点击插件界面右上角的 **设置按钮**
 
 ![Kilo Code 首页](/assets/images/kilo-code/home.png)
 
@@ -34,6 +34,7 @@ Kilo Code 是 VS Code 扩展形态的编码代理，适合在编辑器内直接�
 |配置项|填写内容|
 |---|---|
 |提供商 ID|`codeflow`|
+|显示名称|`{{SITE_NAME}}`|
 |Provider API|`OpenAI Compatible`|
 |基础 URL|`{{SITE_URL}}/v1`|
 |API 密钥|在 {{SITE_NAME}} 创建的令牌|
@@ -45,9 +46,11 @@ Kilo Code 是 VS Code 扩展形态的编码代理，适合在编辑器内直接�
 
 ![添加模型](/assets/images/kilo-code/add-model.png)
 
-## 保存并启用
+确认供应商与模型信息无误后，点击页面中的提交按钮
 
-确认供应商与模型信息无误后，点击页面中的保存或提交按钮
+![提交](/assets/images/kilo-code/submit.png)
+
+## 保存并启用
 
 ![提交配置](/assets/images/kilo-code/submit-config.png)
 
