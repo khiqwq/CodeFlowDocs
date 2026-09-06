@@ -20,15 +20,15 @@ Kilo Code 是 VS Code 扩展形态的编码代理，适合在编辑器内直接�
 
 进入 Kilo Code 扩展，点击界面右上角的设置按钮
 
-![Kilo Code 首页](/assets/images/kilo-code/home.png)
+![Kilo Code 首页](/assets/images/kilo-code/home.webp)
 
 选择左侧的 **提供商** 选项卡
 
-![提供商选项卡](/assets/images/kilo-code/providers-tab.png)
+![提供商选项卡](/assets/images/kilo-code/providers-tab.webp)
 
 在 **提供商** 选项卡中找到 **自定义服务商**，点击右侧的 **连接** 按钮
 
-![添加自定义提供商](/assets/images/kilo-code/custom-provider.png)
+![添加自定义提供商](/assets/images/kilo-code/custom-provider.webp)
 
 ## 填写配置
 
@@ -41,19 +41,19 @@ Kilo Code 是 VS Code 扩展形态的编码代理，适合在编辑器内直接�
 |**API 密钥**|在 {{SITE_NAME}} 创建的令牌|
 |令牌分组|按需选择，决定可获取的模型范围|
 
-![填写基础 URL 与密钥](/assets/images/kilo-code/endpoint-and-key.png)
+![填写基础 URL 与密钥](/assets/images/kilo-code/endpoint-and-key.webp)
 
 在 **基础 URL** 中填写接入地址，在 **API 密钥** 中填写令牌。Kilo Code 会自动获取当前分组可用的模型列表，选择需要使用的模型并添加
 
-![添加模型](/assets/images/kilo-code/add-model.png)
+![添加模型](/assets/images/kilo-code/add-model.webp)
 
 ## 保存并启用
 
 确认供应商与模型信息无误后，点击 **提交**
 
-![提交](/assets/images/kilo-code/submit.png)
+![提交](/assets/images/kilo-code/submit.webp)
 
-![提交配置](/assets/images/kilo-code/submit-config.png)
+![提交配置](/assets/images/kilo-code/submit-config.webp)
 
 ## 验证接入
 

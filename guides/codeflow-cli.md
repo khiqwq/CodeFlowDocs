@@ -40,7 +40,7 @@ codeflow
 
 首次启动时，按界面提示登录现有 {{SITE_NAME}} 账号；没有账号时，可以直接在工具内注册。登录状态保存在当前用户的本地配置目录中，不要将该目录共享给其他人
 
-![CodeFlow CLI 登录页面](/assets/images/codeflow-cli/login.png)
+![CodeFlow CLI 登录页面](/assets/images/codeflow-cli/login.webp)
 
 交互界面支持键盘和鼠标操作：方向键移动，`Enter` 打开或确认，`Esc` 返回；按 `?` 查看当前界面的键位帮助，按 `q` 退出或返回上一级
 
@@ -50,7 +50,7 @@ codeflow
 
 登录后，可以在交互界面中使用以下功能：
 
-![CodeFlow CLI 数据看板](/assets/images/codeflow-cli/client-home.png)
+![CodeFlow CLI 数据看板](/assets/images/codeflow-cli/client-home.webp)
 
 |功能|可执行的操作|
 |---|---|
@@ -72,11 +72,11 @@ codeflow
 
 先在 **令牌管理** 中按 `n` 新建令牌：填写名称、选择分组，并按需设置费用限制。完整令牌只显示一次，创建后立即复制并妥善保存
 
-![在 CodeFlow CLI 中创建令牌](/assets/images/codeflow-cli/create-token.png)
+![在 CodeFlow CLI 中创建令牌](/assets/images/codeflow-cli/create-token.webp)
 
 令牌创建完成后，选择 **写入配置**，再选择要写入的客户端。写入前，工具会读取本机现有配置，展示将要修改的文件，并标明对应客户端是否已经配置
 
-![选择要写入配置的客户端](/assets/images/codeflow-cli/write-client-config.png)
+![选择要写入配置的客户端](/assets/images/codeflow-cli/write-client-config.webp)
 
 ### Claude Code
 

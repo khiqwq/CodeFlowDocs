@@ -6,7 +6,7 @@
 
 将客户端原有的模型服务地址（例如 `https://api.anthropic.com`）替换为 {{SITE_NAME}} 的接入地址，客户端即通过 {{SITE_NAME}} 调用相应模型。在控制台 **令牌管理** 页面下方的 **API 接入地址** 区域获取地址，支持一键复制
 
-![令牌管理与 API 接入地址](/assets/images/access/token-management-api-endpoint.png)
+![令牌管理与 API 接入地址](/assets/images/access/token-management-api-endpoint.webp)
 
 控制台提供 **中国优化线路** 与 **全球加速线路**，两条线路的账号、令牌与余额通用，可随时切换。先复制所选线路的地址，再按客户端要求决定是否在末尾追加 `/v1`
 
@@ -38,7 +38,7 @@
 
 令牌在 **令牌管理 → 创建令牌** 中生成
 
-![创建令牌](/assets/images/access/create-token.png)
+![创建令牌](/assets/images/access/create-token.webp)
 
 创建对话框含三个字段：
 

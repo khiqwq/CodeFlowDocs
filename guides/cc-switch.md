@@ -16,17 +16,17 @@ CC Switch 是第三方图形化供应商配置管理工具，可在多个供应�
 
 前往 [CC Switch GitHub Releases 页面](https://github.com/farion1231/cc-switch/releases/latest)，在最新版本的 **Assets** 区域选择适用于当前系统的安装包：Windows 推荐下载 `.msi` 文件，macOS 选择 `.dmg` 文件，Linux 可按需选择 AppImage、deb 或 rpm 格式
 
-![CC Switch Release 页面](/assets/images/cc-switch/release-page.png)
+![CC Switch Release 页面](/assets/images/cc-switch/release-page.webp)
 
 ## 添加供应商
 
 打开已安装的 CC Switch，在分组条中选择要配置的客户端
 
-![CC Switch 初始界面](/assets/images/cc-switch/initial-screen.png)
+![CC Switch 初始界面](/assets/images/cc-switch/initial-screen.webp)
 
 在对应分组右侧点击 **+** 添加供应商；如果按钮不可见，先将窗口最大化。选择 **自定义配置**
 
-![选择自定义配置](/assets/images/cc-switch/custom-config.png)
+![选择自定义配置](/assets/images/cc-switch/custom-config.webp)
 
 向下滚动，找到自定义供应商配置项
 
@@ -43,7 +43,7 @@ CC Switch 是第三方图形化供应商配置管理工具，可在多个供应�
 
 按表格填写配置，将 `sk-您的令牌` 替换为在 {{SITE_NAME}} 创建的令牌，填写完成后点击 **保存**
 
-![填入配置内容](/assets/images/cc-switch/provider-config.png)
+![填入配置内容](/assets/images/cc-switch/provider-config.webp)
 
 Claude 配置模板如下：
 
@@ -62,13 +62,13 @@ Claude 配置模板如下：
 
 添加成功后，在主界面找到刚创建的供应商，点击 **启用**，确认状态显示 **使用中**
 
-![启用供应商](/assets/images/cc-switch/enable-provider.png)
+![启用供应商](/assets/images/cc-switch/enable-provider.webp)
 
 ## 验证接入
 
 在终端启动已配置的客户端：Claude Code 运行 `claude`，Codex 运行 `codex`。进入对话界面后，发送一条测试消息，收到正常响应，即表示接入成功。下图为 Claude Code 的验证示例
 
-![Claude Code 运行结果](/assets/images/cc-switch/claude-code-result.png)
+![Claude Code 运行结果](/assets/images/cc-switch/claude-code-result.webp)
 
 ## 常见问题
 

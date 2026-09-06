@@ -16,7 +16,7 @@
 
 进入 **账户充值**，选择预设档位或输入自定义金额，并按页面提示完成支付宝付款。付款成功后额度通常会自动到账；若长时间未到账，保留订单号并提交工单
 
-![账户充值](/assets/images/quick-start/account-recharge.png)
+![账户充值](/assets/images/quick-start/account-recharge.webp)
 
 > **配置说明**
 >
@@ -71,11 +71,11 @@ powershell -c "irm {{SITE_URL}}/install.ps1 | iex"
 
 **数据看板** 显示账户余额、当日请求数、Token 用量与消耗：
 
-![数据看板](/assets/images/quick-start/usage-dashboard.png)
+![数据看板](/assets/images/quick-start/usage-dashboard.webp)
 
 **使用日志** 逐条显示每次调用的输入／输出 Token 与对应金额：
 
-![使用日志](/assets/images/quick-start/usage-log.png)
+![使用日志](/assets/images/quick-start/usage-log.webp)
 
 ## 常见问题
 

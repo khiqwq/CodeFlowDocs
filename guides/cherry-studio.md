@@ -16,7 +16,7 @@ Cherry Studio 是一款支持多供应商管理的桌面 AI 对话客户端。�
 
 从 [Cherry Studio 官方网站](https://www.cherry-ai.com/) 下载并启动客户端
 
-![Cherry Studio 客户端页面](/assets/images/cherry-studio/client-home.png)
+![Cherry Studio 客户端页面](/assets/images/cherry-studio/client-home.webp)
 
 按客户端提示使用邮箱注册或登录
 
@@ -24,9 +24,9 @@ Cherry Studio 是一款支持多供应商管理的桌面 AI 对话客户端。�
 
 点击左下角的设置图标，再点击 **添加服务商**
 
-![进入设置页面](/assets/images/cherry-studio/settings-entry.png)
+![进入设置页面](/assets/images/cherry-studio/settings-entry.webp)
 
-![添加供应商](/assets/images/cherry-studio/add-provider.png)
+![添加供应商](/assets/images/cherry-studio/add-provider.webp)
 
 ## 填写配置
 
@@ -39,15 +39,15 @@ Cherry Studio 是一款支持多供应商管理的桌面 AI 对话客户端。�
 
 在供应商列表中选择 **Anthropic**；列表通常同时包含 **OpenAI** 与 **Anthropic**
 
-![添加模型服务](/assets/images/cherry-studio/add-model-service.png)
+![添加模型服务](/assets/images/cherry-studio/add-model-service.webp)
 
 填写完成后，在右侧供应商详情中点击 **获取模型列表**
 
-![获取模型列表](/assets/images/cherry-studio/api-endpoint-key.png)
+![获取模型列表](/assets/images/cherry-studio/api-endpoint-key.webp)
 
 在返回的列表中找到需要使用的模型，点击右侧的 **+** 添加模型
 
-![模型列表](/assets/images/cherry-studio/model-list.png)
+![模型列表](/assets/images/cherry-studio/model-list.webp)
 
 如需通过 OpenAI 端点接入，选择 **OpenAI** 供应商，将 **Base URL** 填写为 `{{SITE_URL}}/v1`，并使用 Codex 官方分组的令牌
 
@@ -55,7 +55,7 @@ Cherry Studio 是一款支持多供应商管理的桌面 AI 对话客户端。�
 
 在供应商详情中点击右上角的启用选项
 
-![启用服务商](/assets/images/cherry-studio/enable-provider.png)
+![启用服务商](/assets/images/cherry-studio/enable-provider.webp)
 
 ## 验证接入
 

@@ -12,7 +12,7 @@
 
 模型单价由 **模型广场** 公示；登录后还可查看平台提供的实时可用率信息
 
-![模型广场](/assets/images/models-and-billing/model-marketplace.png)
+![模型广场](/assets/images/models-and-billing/model-marketplace.webp)
 
 > **配置说明**
 >
@@ -26,7 +26,7 @@
 
 **订阅套餐**：订阅期内按窗口额度调用，不消耗账户余额
 
-![订阅套餐](/assets/images/models-and-billing/subscription-plans.png)
+![订阅套餐](/assets/images/models-and-billing/subscription-plans.webp)
 
 > **注意**
 >
