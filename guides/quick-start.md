@@ -60,7 +60,7 @@ powershell -c "irm {{SITE_URL}}/install.ps1 | iex"
 - [Cherry Studio](/guides/cherry-studio.md)
 - [Kilo Code](/guides/kilo-code.md)
 - [OpenCode](/guides/opencode.md)
-- [Pi](/guides/pi.md)
+- [Pi Coding Agent](/guides/pi.md)
 - [OpenClaw](/guides/openclaw.md)
 
 各客户端要求的接入地址格式不同（部分末尾带 `/v1`，部分不带），以对应页面为准；完整列表见[接入地址说明](/guides/access.md#base-url)

@@ -27,7 +27,7 @@
 |Cherry Studio|Anthropic 供应商不带 `/v1`，OpenAI 供应商带 `/v1`|
 |Kilo Code|`{{SITE_URL}}/v1`|
 |OpenCode|`{{SITE_URL}}/v1`|
-|Pi|Claude 模型（`anthropic-messages`）使用 `{{SITE_URL}}`，不带 `/v1`|
+|Pi Coding Agent|`{{SITE_URL}}`，不带 `/v1`|
 |OpenClaw|`{{SITE_URL}}`，不带 `/v1`|
 
 > **注意**

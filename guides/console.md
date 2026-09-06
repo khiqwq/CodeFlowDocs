@@ -30,5 +30,5 @@
 - [CC Switch](https://github.com/farion1231/cc-switch/blob/main/README_ZH.md)
 - [Cherry Studio](https://docs.cherry-ai.com/)
 - [OpenCode](https://opencode.ai/docs)
-- [Pi](https://pi.dev/docs/latest)
+- [Pi Coding Agent](https://pi.dev/docs/latest)
 - [OpenClaw](https://github.com/openclaw/openclaw)
