@@ -4,7 +4,7 @@ CodeFlow 命令行工具是 {{SITE_NAME}} 官方提供的交互式终端工具�
 
 > **配置说明**
 >
-> 工具版本和界面可能更新，实际选项以当前界面显示为准。本页依据 2026 年 9 月 6 日核验的信息整理，核验版本为 CodeFlow CLI v1.23.4
+> 工具版本和界面可能更新，实际选项以当前界面显示为准。本页依据 2026 年 9 月 13 日核验的信息整理，核验版本为 CodeFlow CLI v1.25.0
 
 > **注意**
 >
@@ -86,7 +86,29 @@ codeflow
 
 选择 **Codex** 后，先从当前令牌可用的模型中选择默认模型。工具随后更新 `~/.codex/config.toml` 中的模型供应商、接入地址和默认模型，并把令牌写入 `~/.codex/auth.json`；设置了 `CODEX_HOME` 环境变量时，使用该目录
 
-工具为 Codex 使用带 `/v1` 的接入地址，并按 Responses 协议写入供应商配置。原配置文件不是合法 JSON 或 TOML，或结构无法安全合并时，工具会停止写入并提示先修复文件
+工具为 Codex 使用带 `/v1` 的接入地址，并按 Responses 协议写入供应商配置
+
+### OpenClaw
+
+选择 **OpenClaw** 后，先选择默认模型。工具随后在 `~/.openclaw/openclaw.json` 的 `models.providers` 中写入供应商：接入地址不带 `/v1`，协议为 `anthropic-messages`，令牌写在 `apiKey`，模型列表登记当前令牌可路由的全部模型；`agents.defaults.model.primary` 指向所选默认模型，`agents.defaults.models` 补齐各模型条目。设置了 `OPENCLAW_STATE_DIR` 环境变量时，使用该目录
+
+OpenClaw 网关会自动加载改动；未生效时运行 `openclaw gateway restart`
+
+### Hermes Agent
+
+选择 **Hermes Agent** 后，先选择默认模型。工具随后在 `~/.hermes/config.yaml` 的 `providers` 中写入供应商：接入地址不带 `/v1`，`transport` 为 `anthropic_messages`，`discover_models` 为 `false`，模型列表登记当前令牌可路由的全部模型；`model.provider` 与 `model.default` 指向该供应商与所选默认模型。令牌写入同目录 `.env` 中由 `key_env` 指定的变量，变量名为站点名大写加 `_API_KEY`，例如 `CODEFLOW_API_KEY`。Windows 默认目录为 `%LOCALAPPDATA%\hermes\`；设置了 `HERMES_HOME` 环境变量时，使用该目录
+
+配置只对新会话生效，写入后重新运行 `hermes`
+
+### OpenCode
+
+选择 **OpenCode** 后，先选择默认模型。工具随后写入 OpenCode 的全局配置文件：`~/.config/opencode/` 下已有 `opencode.jsonc`、`opencode.json` 或 `config.json` 时按此顺序取首个，都没有时新建 `opencode.jsonc`。文件中的 `provider` 供应商使用 `@ai-sdk/anthropic`，接入地址带 `/v1`，模型列表登记当前令牌可路由的全部模型；`model` 指向所选默认模型。令牌写入 OpenCode 的凭据文件 `~/.local/share/opencode/auth.json`，与 `opencode auth login` 的结果一致，不写入 JSON 配置。设置了 `XDG_CONFIG_HOME` 或 `XDG_DATA_HOME` 环境变量时，分别使用对应目录
+
+### Pi Coding Agent
+
+选择 **Pi Coding Agent** 后，先选择默认模型。工具随后在 `~/.pi/agent/models.json` 的 `providers` 中写入供应商：接入地址不带 `/v1`，协议为 `anthropic-messages`，令牌写在 `apiKey`，模型列表登记当前令牌可路由的全部模型；同时把 `settings.json` 的 `defaultProvider` 与 `defaultModel` 设为该供应商与所选默认模型，之后直接运行 `pi` 即可。设置了 `PI_CODING_AGENT_DIR` 环境变量时，使用该目录
+
+以上供应商的 ID 为站点名的小写形式。工具只改写与 {{SITE_NAME}} 相关的字段，文件中的其他配置项保持不变；原配置文件不是合法 JSON、TOML 或 YAML，或结构无法安全合并时，工具会停止写入并提示先修复文件
 
 > **提示**
 >

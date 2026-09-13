@@ -6,6 +6,10 @@ Hermes Agent 是 Nous Research 开源的终端自主代理，可以执行命令�
 >
 > 客户端界面与配置字段可能随版本更新变化，模型 ID 与可用分组以 {{SITE_NAME}} 控制台实时显示为准。本页依据 2026 年 9 月 13 日对照 Hermes Agent 官方文档与源码核验的信息整理，核验版本为 Hermes Agent v0.21.2
 
+> **提示**
+>
+> 推荐使用 [CodeFlow 命令行工具](/guides/codeflow-cli.md#一键配置客户端) 一键写入本页配置，无需手动编辑文件。本页说明手动配置方式
+
 ## 准备工作
 
 - 已注册 {{SITE_NAME}} 账号并有可用额度，参见[快速开始](/guides/quick-start.md)
