@@ -29,6 +29,7 @@
 - [Codex](https://github.com/openai/codex)
 - [CC Switch](https://github.com/farion1231/cc-switch/blob/main/README_ZH.md)
 - [Cherry Studio](https://docs.cherry-ai.com/)
+- [OpenClaw](https://github.com/openclaw/openclaw)
+- [Hermes Agent](https://hermes-agent.nousresearch.com/docs)
 - [OpenCode](https://opencode.ai/docs)
 - [Pi Coding Agent](https://pi.dev/docs/latest)
-- [OpenClaw](https://github.com/openclaw/openclaw)

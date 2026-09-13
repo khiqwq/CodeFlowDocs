@@ -26,9 +26,10 @@
 |CC Switch|Claude 模板不带 `/v1`，Codex 模板带 `/v1`|
 |Cherry Studio|Anthropic 供应商不带 `/v1`，OpenAI 供应商带 `/v1`|
 |Kilo Code|`{{SITE_URL}}/v1`|
+|OpenClaw|`{{SITE_URL}}`，不带 `/v1`|
+|Hermes Agent|`{{SITE_URL}}`，不带 `/v1`|
 |OpenCode|`{{SITE_URL}}/v1`|
 |Pi Coding Agent|`{{SITE_URL}}`，不带 `/v1`|
-|OpenClaw|`{{SITE_URL}}`，不带 `/v1`|
 
 > **注意**
 >

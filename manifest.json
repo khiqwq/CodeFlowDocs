@@ -17,9 +17,10 @@
         { "slug": "cc-switch", "title": "CC Switch" },
         { "slug": "cherry-studio", "title": "Cherry Studio" },
         { "slug": "kilo-code", "title": "Kilo Code" },
+        { "slug": "openclaw", "title": "OpenClaw" },
+        { "slug": "hermes-agent", "title": "Hermes Agent" },
         { "slug": "opencode", "title": "OpenCode" },
-        { "slug": "pi", "title": "Pi Coding Agent" },
-        { "slug": "openclaw", "title": "OpenClaw" }
+        { "slug": "pi", "title": "Pi Coding Agent" }
       ]
     },
     {
