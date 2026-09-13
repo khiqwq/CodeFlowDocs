@@ -1,10 +1,10 @@
-# Pi
+# Pi Coding Agent
 
-Pi（Pi Coding Agent）是一款在终端中运行的轻量代理，可以读取和修改文件、执行命令，并通过技能与扩展完成开发、资料整理等任务。本页介绍使用 {{SITE_NAME}} 令牌接入 Claude 模型的方式，接入地址（Base URL）不带 `/v1`
+Pi Coding Agent 是一款在终端中运行的轻量代理，可以读取和修改文件、执行命令，并通过技能与扩展完成开发、资料整理等任务。本页介绍使用 {{SITE_NAME}} 令牌接入 Claude 模型的方式，接入地址（Base URL）不带 `/v1`
 
 > **配置说明**
 >
-> 客户端界面与配置字段可能随版本更新变化，模型 ID 与可用分组以 {{SITE_NAME}} 控制台实时显示为准。本页依据 2026 年 9 月 6 日对照 Pi 官方文档核验的信息整理，核验版本为 Pi v0.85.1
+> 客户端界面与配置字段可能随版本更新变化，模型 ID 与可用分组以 {{SITE_NAME}} 控制台实时显示为准。本页依据 2026 年 9 月 6 日对照 Pi Coding Agent 官方文档核验的信息整理，核验版本为 Pi Coding Agent v0.85.1
 
 ## 准备工作
 
@@ -12,11 +12,11 @@ Pi（Pi Coding Agent）是一款在终端中运行的轻量代理，可以读取
 - 已创建 Claude 系列分组的令牌，参见[接入凭证与分组](/guides/access.md)
 - 本页使用的接入地址为 `{{SITE_URL}}`，不带 `/v1`
 
-## 安装 Pi
+## 安装 Pi Coding Agent
 
-确保已安装 [Node.js](https://nodejs.org/)，Pi v0.85.1 要求 Node.js 22.19.0 或更高版本
+确保已安装 [Node.js](https://nodejs.org/)，Pi Coding Agent v0.85.1 要求 Node.js 22.19.0 或更高版本
 
-Windows 默认使用 Git Bash 执行命令，建议先安装 [Git for Windows](https://git-scm.com/download/win)。模型使用的命令工具可按 [Pi Windows 文档](https://pi.dev/docs/latest/windows)改为 PowerShell；交互输入中的 `!`、`!!` 命令仍使用 Bash
+Windows 默认使用 Git Bash 执行命令，建议先安装 [Git for Windows](https://git-scm.com/download/win)。模型使用的命令工具可按 [Pi Coding Agent 的 Windows 文档](https://pi.dev/docs/latest/windows) 改为 PowerShell；交互输入中的 `!`、`!!` 命令仍使用 Bash
 
 在终端运行以下命令安装并检查版本：
 
@@ -25,11 +25,11 @@ npm install -g --ignore-scripts @earendil-works/pi-coding-agent
 pi --version
 ```
 
-`--ignore-scripts` 与官方 npm 安装命令一致，Pi 的正常 npm 安装不依赖安装脚本。其他安装方式见 [Pi 官方网站](https://pi.dev/)
+`--ignore-scripts` 与官方 npm 安装命令一致，Pi Coding Agent 的正常 npm 安装不依赖安装脚本。其他安装方式见 [Pi Coding Agent 官方网站](https://pi.dev/)
 
 ## 填写配置
 
-Pi 的自定义供应商配置写在用户级 `models.json` 中：
+Pi Coding Agent 的自定义供应商配置写在用户级 `models.json` 中：
 
 |操作系统|默认路径|
 |---|---|
@@ -61,7 +61,7 @@ Pi 的自定义供应商配置写在用户级 `models.json` 中：
 |字段|说明|
 |---|---|
 |`providers.codeflow`|自定义供应商 ID，启动命令和模型选择时使用 `codeflow`|
-|`baseUrl`|所选线路的接入地址，不带 `/v1`；Pi 使用的 Anthropic SDK 会补全消息接口路径|
+|`baseUrl`|所选线路的接入地址，不带 `/v1`；Pi Coding Agent 使用的 Anthropic SDK 会补全消息接口路径|
 |`api`|本页使用 `anthropic-messages`，对应 Claude 模型|
 |`apiKey`|填写在 {{SITE_NAME}} 创建的 Claude 系列分组令牌，替换示例中的 `sk-您的令牌`|
 |`models[].id`|实际发送给服务端的模型 ID，需与令牌分组匹配|
@@ -73,9 +73,9 @@ Pi 的自定义供应商配置写在用户级 `models.json` 中：
 
 > **提示**
 >
-> 本示例未指定模型能力字段，Pi v0.85.1 默认使用 `reasoning: false`、`input: ["text"]`、`contextWindow: 128000` 和 `maxTokens: 16384`，即关闭思考、仅支持文字输入、上下文窗口为 128000 Token、最大输出为 16384 Token。这些是客户端默认配置，模型的实际能力上限需另行核对；调整方式见 [Pi 自定义模型文档](https://pi.dev/docs/latest/models#model-configuration)
+> 本示例未指定模型能力字段，Pi Coding Agent v0.85.1 默认使用 `reasoning: false`、`input: ["text"]`、`contextWindow: 128000` 和 `maxTokens: 16384`，即关闭思考、仅支持文字输入、上下文窗口为 128000 Token、最大输出为 16384 Token。这些是客户端默认配置，模型的实际能力上限需另行核对；调整方式见 [Pi Coding Agent 自定义模型文档](https://pi.dev/docs/latest/models#model-configuration)
 >
-> 未填写 `cost` 时，Pi 本地费用可能显示为 0，实际扣费仍以 {{SITE_NAME}} 的 **使用日志** 和 **额度流水** 为准
+> 未填写 `cost` 时，Pi Coding Agent 本地费用可能显示为 0，实际扣费仍以 {{SITE_NAME}} 的 **使用日志** 和 **额度流水** 为准
 
 ## 验证接入
 
@@ -95,11 +95,11 @@ pi --provider codeflow --model claude-fable-5-1
 |---|---|
 |Node.js 版本不满足要求|升级到 Node.js 22.19.0 或更高版本后重新安装|
 |安装后找不到 `pi`|重开终端，确认 npm 全局命令目录已加入 `PATH`|
-|Windows 无法执行 Bash 命令|安装 Git for Windows，详见 [Pi Windows 文档](https://pi.dev/docs/latest/windows)|
+|Windows 无法执行 Bash 命令|安装 Git for Windows，详见 [Pi Coding Agent 的 Windows 文档](https://pi.dev/docs/latest/windows)|
 |`/model` 中没有 `codeflow` 模型|核对 `models.json` 路径与结构，确认已填写模型和 `apiKey`|
 |提示无 API Key 或返回 401|重新复制 Claude 系列分组的令牌填入 `apiKey`，确认无多余空格|
 |返回 404 或模型不存在|确认 `baseUrl` 不带 `/v1`，模型 ID 当前可用且分组匹配|
 |修改配置后未生效|确认修改的是当前用户的 `models.json`，再重新选择模型|
-|Pi 显示费用为 0|示例未配置 `cost`，实际扣费以 **使用日志** 和 **额度流水** 为准|
-|已安装的技能未加载|按 [Pi 技能文档](https://pi.dev/docs/latest/skills#validation) 核对 `SKILL.md` 的 `name` 与 `description`|
-|如何更新 Pi|运行 `pi update`，详见 [Pi 包管理文档](https://pi.dev/docs/latest/packages)|
+|Pi Coding Agent 显示费用为 0|示例未配置 `cost`，实际扣费以 **使用日志** 和 **额度流水** 为准|
+|已安装的技能未加载|按 [Pi Coding Agent 技能文档](https://pi.dev/docs/latest/skills#validation) 核对 `SKILL.md` 的 `name` 与 `description`|
+|如何更新 Pi Coding Agent|运行 `pi update`，详见 [Pi Coding Agent 包管理文档](https://pi.dev/docs/latest/packages)|
