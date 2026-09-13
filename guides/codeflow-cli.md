@@ -90,9 +90,11 @@ codeflow
 
 ### OpenClaw
 
-选择 **OpenClaw** 后，先选择默认模型。工具随后在 `~/.openclaw/openclaw.json` 的 `models.providers` 中写入供应商：接入地址不带 `/v1`，协议为 `anthropic-messages`，令牌写在 `apiKey`，模型列表登记当前令牌可路由的全部模型；`agents.defaults.model.primary` 指向所选默认模型，`agents.defaults.models` 补齐各模型条目。设置了 `OPENCLAW_STATE_DIR` 环境变量时，使用该目录
+选择 **OpenClaw** 后，先选择默认模型。工具随后在 `~/.openclaw/openclaw.json` 的 `models.providers` 中写入供应商：接入地址不带 `/v1`，协议为 `anthropic-messages`，模型列表登记当前令牌可路由的全部模型；`agents.defaults.model.primary` 指向所选默认模型，`agents.defaults.models` 补齐各模型条目。令牌不写入 `openclaw.json`，而是写入同目录 `.env` 中以站点名大写加 `_API_KEY` 命名的变量（例如 `CODEFLOW_API_KEY`），供应商的 `apiKey` 以环境变量引用指向它；这样重新写入新令牌后网关会读取新值，明文令牌则会被网关固化在各 agent 的 `models.json` 中而无法更换
 
-OpenClaw 网关会自动加载改动；未生效时运行 `openclaw gateway restart`
+目录与文件遵循 OpenClaw 自身的环境变量：`OPENCLAW_CONFIG_PATH` 直接指定配置文件，`OPENCLAW_STATE_DIR` 指定状态目录，`OPENCLAW_HOME` 替代主目录，均支持以 `~` 开头。原文件为 JSON5 写法（无引号键、单引号）时，工具会将其整体重排为标准 JSON 后写入，注释因此丢失，与 OpenClaw 自身保存配置时的行为一致
+
+`.env` 在网关启动时读取，写入后运行 `openclaw gateway restart` 使令牌生效
 
 ### Hermes Agent
 
