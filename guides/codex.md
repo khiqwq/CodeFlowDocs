@@ -43,7 +43,7 @@ model_provider = "codeflow"
 model = "gpt-6-astra"
 
 [model_providers.codeflow]
-name = "codeflow"
+name = "CodeFlow"
 base_url = "{{SITE_URL}}/v1"
 wire_api = "responses"
 requires_openai_auth = true
