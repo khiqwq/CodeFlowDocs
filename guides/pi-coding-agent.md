@@ -71,7 +71,7 @@ Pi Coding Agent 的自定义供应商配置写在用户级 `models.json` 中：
 |`models[].id`|实际发送给服务端的模型 ID，需与令牌分组匹配|
 |`models[].name`|用于模型匹配和辅助显示；`/model` 主列表及底栏仍显示模型 `id`|
 
-示例模型 ID 依据 2026 年 9 月 6 日的[模型广场界面留档](/guides/models-and-billing.md#模型广场)选取。使用前核对当前可用模型；更换模型时同步修改 `id`、`name` 及下文启动命令
+示例模型 ID 依据 2026 年 10 月 3 日的[模型广场界面留档](/guides/models-and-billing.md#模型广场)选取。使用前核对当前可用模型；更换模型时同步修改 `id`、`name` 及下文启动命令
 
 中国优化线路与全球加速线路的账号、令牌与余额通用，可随时切换。复制所选线路的地址作为 `baseUrl`，地址格式说明见[接入凭证中的地址列表](/guides/access.md#base-url)
 

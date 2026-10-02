@@ -78,7 +78,7 @@ model:
 |`model.provider`|默认供应商，填写 `custom:codeflow`|
 |`model.default`|默认模型 ID，需与令牌分组匹配|
 
-示例模型 ID 依据 2026 年 9 月 6 日的[模型广场界面留档](/guides/models-and-billing.md#模型广场)选取。使用前核对当前可用模型；更换模型时同步修改 `models` 与 `default`
+示例模型 ID 依据 2026 年 10 月 3 日的[模型广场界面留档](/guides/models-and-billing.md#模型广场)选取。使用前核对当前可用模型；更换模型时同步修改 `models` 与 `default`
 
 中国优化线路与全球加速线路的账号、令牌与余额通用，可随时切换。复制所选线路的地址作为 `api`，地址格式说明见[接入凭证中的地址列表](/guides/access.md#base-url)
 
