@@ -16,7 +16,7 @@ const GUIDE_LINK = /^\/guides\/([a-z0-9]+(?:-[a-z0-9]+)*)\.md(?:#(.+))?$/;
 const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const PLACEHOLDERS = new Set(['{{SITE_URL}}', '{{SITE_NAME}}']);
 /* 站点地址与站点名一律写占位符，不得出现具体域名 */
-const BANNED_TEXT = ['codeflow.asia'];
+const BANNED_TEXT = ['codeflow.sh'];
 
 const problems = [];
 const warnings = [];
