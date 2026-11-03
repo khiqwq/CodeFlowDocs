@@ -49,7 +49,7 @@ Cherry Studio 是一款支持多供应商管理的桌面 AI 对话客户端。�
 
 ![模型列表](/assets/images/cherry-studio/model-list.webp)
 
-如需通过 OpenAI 端点接入，选择 **OpenAI** 供应商，将 **Base URL** 填写为 `{{SITE_URL}}/v1`，并使用 Codex 官方分组的令牌
+如需通过 OpenAI 端点接入，选择 **OpenAI** 供应商，将 **Base URL** 填写为 `{{SITE_URL}}/v1`，并使用 ChatGPT 官方分组的令牌
 
 ## 保存并启用
 

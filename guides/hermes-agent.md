@@ -70,7 +70,7 @@ model:
 |字段|说明|
 |---|---|
 |`providers.codeflow`|自定义供应商 ID，`model.provider` 与 `/model` 命令中以 `custom:codeflow` 引用|
-|`api`|所选线路的接入地址，不带 `/v1`；Hermes Agent 使用的 Anthropic SDK 会补全消息接口路径|
+|`api`|接入地址，不带 `/v1`；Hermes Agent 使用的 Anthropic SDK 会补全消息接口路径|
 |`key_env`|存放令牌的环境变量名，令牌本身写在 `.env` 中|
 |`transport`|本页使用 `anthropic_messages`，对应 Claude 模型|
 |`discover_models`|`false` 表示不向接入地址探测模型列表，`/model` 只显示下方配置的模型|
@@ -80,7 +80,7 @@ model:
 
 示例模型 ID 依据 2026 年 10 月 3 日的[模型广场界面留档](/guides/models-and-billing.md#模型广场)选取。使用前核对当前可用模型；更换模型时同步修改 `models` 与 `default`
 
-中国优化线路与全球加速线路的账号、令牌与余额通用，可随时切换。复制所选线路的地址作为 `api`，地址格式说明见[接入凭证中的地址列表](/guides/access.md#base-url)
+`api` 填写从控制台 **令牌管理** 页面 **API 接入地址** 区域复制的地址，地址格式说明见[接入凭证中的地址列表](/guides/access.md#base-url)
 
 > **提示**
 >

@@ -13,7 +13,7 @@ Codex 是 OpenAI 官方的编码代理，提供命令行与桌面端，二者共
 ## 准备工作
 
 - 已注册 {{SITE_NAME}} 账号并有可用额度，参见[快速开始](/guides/quick-start.md)
-- 已创建 Codex 官方分组的令牌，参见[接入凭证与分组](/guides/access.md)
+- 已创建 ChatGPT 官方分组的令牌，参见[接入凭证与分组](/guides/access.md)
 - 本页使用的接入地址为 `{{SITE_URL}}/v1`，带 `/v1`
 
 ## 安装 Codex
@@ -53,7 +53,7 @@ requires_openai_auth = true
 
 > **注意**
 >
-> `base_url` 必须带 `/v1`；令牌选择 Codex 官方分组
+> `base_url` 必须带 `/v1`；令牌选择 ChatGPT 官方分组
 
 ### auth.json
 
@@ -80,7 +80,7 @@ codex
 |现象|处理方式|
 |---|---|
 |返回 401 或认证失败|确认 `auth.json` 合法且字段名为 `OPENAI_API_KEY`|
-|返回 404 或模型不存在|确认 `model` 可用且令牌属于 Codex 官方分组|
+|返回 404 或模型不存在|确认 `model` 可用且令牌属于 ChatGPT 官方分组|
 |无法连接服务|确认 `base_url` 带 `/v1`，然后重启 Codex|
 |桌面端未生效|完全退出并重新启动 Codex，两端共用同一 `~/.codex` 目录|
 |修改配置后未生效|确认两个文件位于当前用户的 `~/.codex` 目录|

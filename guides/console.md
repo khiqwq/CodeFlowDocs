@@ -6,14 +6,16 @@
 
 |页面|用途|
 |---|---|
-|**额度流水**|账户额度的每笔变动与结余，含预扣、预扣退回、消费三类|
+|**额度流水**|账户额度的每笔变动与结余，类型包括充值、预扣、预扣退回、消费、退款、退款返还、奖励与管理员调整|
 |**发票管理**|为已付款订单在线申请开票，可保存常用抬头|
-|**邀请好友**|获取邀请码并查看当前邀请奖励规则；具体比例以控制台实时显示为准|
+|**邀请好友**|获取邀请码与邀请链接，查看邀请记录和奖励额度。核验时（2026 年 11 月 3 日）的规则为好友首次充值后双方各得实付金额对应额度的 5%，以控制台实时显示为准|
 |**工单支持**|提交问题并跟进处理进度|
 |**社区论坛**|与其他用户交流使用经验，可发帖、评论、点赞和收藏|
 |**站内消息**|工单回复、发票与退款结果、订阅到期等通知，以及社区互动与审核结果|
 |**系统公告**|平台通知与维护公告|
 |**个人主页**|查看社区足迹；在 **账户与安全** 中修改用户名／邮箱／密码，启用两步验证与 Passkey，查看登录设备|
+
+充值订单与订阅订单可在 **账户充值**、**订阅套餐** 页面申请退款，规则见[退款](/guides/models-and-billing.md#退款)
 
 ## 账户安全
 
@@ -31,6 +33,7 @@
 - [Codex](https://github.com/openai/codex)
 - [CC Switch](https://github.com/farion1231/cc-switch/blob/main/README_ZH.md)
 - [Cherry Studio](https://docs.cherry-ai.com/)
+- [Kilo Code](https://kilo.ai/docs)
 - [OpenClaw](https://github.com/openclaw/openclaw)
 - [Hermes Agent](https://hermes-agent.nousresearch.com/docs)
 - [OpenCode](https://opencode.ai/docs)
