@@ -13,7 +13,7 @@ Claude Code 是 Anthropic 官方的终端编码代理，适合直接在终端内
 ## 准备工作
 
 - 已注册 {{SITE_NAME}} 账号并有可用额度，参见[快速开始](/guides/quick-start.md)
-- 已创建 Claude 系列分组（Claude 低价分组、Claude 稳定分组或 Claude 官方分组）的令牌，参见[接入凭证与分组](/guides/access.md)
+- 已创建 Claude 系列分组（Claude 低价分组、Claude 高智分组或 Claude 官方分组）的令牌，参见[接入凭证与分组](/guides/access.md)
 - 本页使用的接入地址为 `{{SITE_URL}}`，不带 `/v1`
 
 ## 安装 Claude Code
